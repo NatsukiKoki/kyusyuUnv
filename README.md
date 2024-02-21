@@ -52,7 +52,7 @@ FIG_1: First line of pictures are the origin pictures, the second line of pictur
         
   After realized the VAE network cannot performs well on this task, I thought may be the diffusion model can solve this problem.
 >#### A brief introduction to the Diffusion model
-        Diffusion model is a model that not reconstruct the picture in just one time but several times instead, each time it removes a little bit of noise in the image, after running plenty of times, it can remove all the noise in the image. If the input is a pure noisy image, it can generate a new picture from the input which belongs to the dataset. 
+  Diffusion model is a model that not reconstruct the picture in just one time but several times instead, each time it removes a little bit of noise in the image, after running plenty of times, it can remove all the noise in the image. If the input is a pure noisy image, it can generate a new picture from the input which belongs to the dataset. 
         
    By consider the input noisy image as a image in the middle of the pure noisy and the input image, we can use the diffusion progress to remove the noise in the input image and reconstruct the image. Here are some of the result
 >![DIFFUSION result](./diffusion_result/0.png)
