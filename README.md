@@ -13,7 +13,9 @@
 >#### What is the contrastive loss
     
 >        Contrastive loss is a loss function which compare the distance between two given vectors based on a label which tell the function whether the two vectors are belongs to the same category. The formular looks like this
->    $$ L(A,B)=y||F(A)-F(B)||^2+(1-y)\max(0, m^2-||F(A)-F(B)||^2) $$
+> $$
+> L(A,B)=y||F(A)-F(B)||^2+(1-y)\max(0, m^2-||F(A)-F(B)||^2)
+> $$
         A, B represent the two input object in this case are two pictures, F() represents the Siamese network which translate the inputs into feature vectors, y represents whether the two input objects are belongs to same category (1 represent same category, 0 represent different catogory), $$||F(A)-F(B)||^2$$ represents the distance between the two feature vectors, and m is a hyperparameter which represents the max difference we accept while two inputs belong to different category. 
         A loss function is a function that we want its output decreases during the training. 
         First, let's consider the situation that the two inputs belong to the same category, in this case the formular equals to $$L(A,B)=||F(A)-F(B)||^2$$ which is the distance between the two feature vectors. The more accurate the network is, the smaller distance between the two feature vectors, this is exactly what we want for a loss function. 
